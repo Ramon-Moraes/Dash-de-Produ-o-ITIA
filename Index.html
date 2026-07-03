@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Industrial</title>
+
+    <link rel="stylesheet" href="css/style.css">
+   
+    
+</head>
+
+<body>
+
+    <!-- Barra lateral (Sidebar) -->
+    <div class="sidebar">
+        <h2>Dashboard Industrial</h2>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main">
+
+        <header>
+            <h1>Produção de Aço</h1>
+            <button onclick="carregarDados()">Atualizar</button>
+        </header>
+
+        <main>
+            <!-- Bloco de KPIs -->
+            <section class="kpis">
+                <div class="card">Produção Total</div>
+                <div class="card">EMP</div>
+                <div class="card">DCS</div>
+                <div class="card">TT1</div>
+                <div class="card">Paradas</div>
+                <div class="card">Produção/Hora</div>
+            </section>
+
+            <!-- Bloco de Gráficos G1 a G4 -->
+            <section class="grid">
+                <canvas id="g1"></canvas>
+                <canvas id="g2"></canvas>
+                <canvas id="g3"></canvas>
+                <canvas id="g4"></canvas>
+            </section>
+
+            <!-- Bloco de Especificações de Produção -->
+            <section class="grid">
+                <canvas id="prodGeral"></canvas>
+                <canvas id="destino"></canvas>
+                <canvas id="borda"></canvas>
+                <canvas id="esp"></canvas>
+                <canvas id="aco"></canvas>
+                <canvas id="peso"></canvas>
+            </section>
+
+            <!-- Bloco de Análise de Paradas (agora dentro do fluxo correto) -->
+            <section class="grid">
+                <canvas id="paradasTotal"></canvas>
+                <canvas id="natureza"></canvas>
+                <canvas id="tipoParada"></canvas>
+                <canvas id="prodHora"></canvas>
+            </section>
+            
+        
+        </main>
+
+    </div> <!-- Fim da div.main -->
+    <script src='js/googleSheets.js'></script>
+    <script src='js/filtros.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/producao.js"></script>
+    <script src="js/paradas.js"></script>
+    <script src='js/final.js'></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
